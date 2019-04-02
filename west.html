@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wild Wild West</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="loadCanvas.js"></script>
+    <script src="attachEvents.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <span id="error" style="font-size: 20px; color: red;display: block; text-align: center; margin-top: 35px;"></span>
+        <span id="valid" style="font-size: 20px; color: green;display: block; text-align: center; margin-top: 35px;"></span>
+        <span id="lose" style="font-size: 40px; color: orange;display: block; text-align: center; margin-top: 35px;"></span>
+
+        <div id="buttons">
+            <button style="display: none;" id="save">Save</button>
+            <button style="display: none;" id="reload">Reload</button>
+        </div>
+        <canvas style="display: none;" width="800" height="600" style="border: 5px solid orange" id="canvas">Canvas not supported</canvas>
+        <fieldset>
+            <legend>Players</legend>
+            <div id="players">
+                
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Add Player</legend>
+            <input type="text" id="addName">
+            <button id="addPlayer">Add Player</button>
+        </fieldset>
+        <script>
+            $(document).ready(attachEvents);
+        </script>
+</body>
+</html>
