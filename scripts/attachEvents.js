@@ -128,7 +128,8 @@ function attachEvents() {
             selectedPlayer.bullets += 6;
             valid();
         }else if(selectedPlayer.bullets === 0){
-            $('#lose').text('LOSE!');            
+            $('#lose').text('LOSE!');
+			cleanMessage();
         }
     }
     
@@ -163,5 +164,6 @@ function attachEvents() {
     function cleanMessage(){
         $('#error').text('');
         $('#valid').text('');
+		$('#lose').text('');
     }
 }
